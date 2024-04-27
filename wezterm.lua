@@ -89,6 +89,8 @@ config.launch_menu = {
 	{ label = 'Ubuntu',  args = { 'ssh', 'zonglin@172.20.115.202', '-p', '22' } },
 }
 
+-- 配置字体大小
+config.font_size = 14
 
 config.keys = {
 	{ key = "`",   mods = "LEADER|CTRL",  action = wezterm.action { SendString = "`" } },
