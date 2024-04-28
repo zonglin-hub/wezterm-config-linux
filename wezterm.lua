@@ -5,12 +5,12 @@ local config = {}
 config.default_prog = { '/home/zonglin/.cargo/bin/nu', '-l' }
 
 -- 配置启动器菜单
-config.launch_menu = {
-	{ label = 'Bash',    args = { 'bash', '-l' } },
-	{ label = 'Nushell', args = { 'nu', '-l' } },
-	-- ssh demo
-	-- { label = 'Ubuntu',  args = { 'ssh', 'zonglin@172.20.115.202', '-p', '22' } },
-}
+-- config.launch_menu = {
+-- 	{ label = 'Bash',    args = { 'bash', '-l' } },
+-- 	{ label = 'Nushell', args = { 'nu', '-l' } },
+-- 	-- ssh demo
+-- 	-- { label = 'Ubuntu',  args = { 'ssh', 'zonglin@172.20.115.202', '-p', '22' } },
+-- }
 
 -- -- 配置字体大小
 -- local platform = require('utils.platform')
@@ -225,4 +225,5 @@ local _Config_ = require('config.init')
 
 return _Config_:init()
 	:append(require('config.fonts'))
-	:append(require('config.bindings')).options
+	:append(require('config.bindings'))
+	:append(require('config.launch')).options
