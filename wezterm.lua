@@ -91,6 +91,8 @@ config.launch_menu = {
 
 -- 配置字体大小
 config.font_size = 14
+-- config.font = wezterm.font 'Cascadia Code'
+config.font = wezterm.font('Cascadia Code')
 
 config.keys = {
 	{ key = "`",   mods = "LEADER|CTRL",  action = wezterm.action { SendString = "`" } },
