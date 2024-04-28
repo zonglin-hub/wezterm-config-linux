@@ -129,6 +129,24 @@ config.keys = {
 	{ key = "x",   mods = "LEADER",       action = wezterm.action { CloseCurrentPane = { confirm = true } } },
 	{ key = "y",   mods = "CTRL",         action = wezterm.action({ PasteFrom = "Clipboard" }) },
 	{ key = "Tab", mods = "LEADER",       action = wezterm.action({ ActivateTabRelative = 1 }) },
+
+	-- panes --
+	-- panes: split panes
+	-- https://wezfurlong.org/wezterm/config/lua/keyassignment/SplitVertical.html?h=split+vertical
+	{ key = [[\]], mods = 'CTRL|ALT',     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+
+	-- { key = [[\]],   mods = mod.SUPER_REV,  action = act.SplitVertical({ domain = 'CurrentPaneDomain' }) },
+
+	-- -- panes: zoom+close pane
+	-- { key = 'Enter', mods = mod.SUPER,      action = act.TogglePaneZoomState },
+	-- { key = 'w',     mods = mod.SUPER,      action = act.CloseCurrentPane({ confirm = false }) },
+
+	-- -- panes: navigation
+	-- { key = 'k',     mods = mod.SUPER_REV,  action = act.ActivatePaneDirection('Up') },
+	-- { key = 'j',     mods = mod.SUPER_REV,  action = act.ActivatePaneDirection('Down') },
+	-- { key = 'h',     mods = mod.SUPER_REV,  action = act.ActivatePaneDirection('Left') },
+	-- { key = 'l',     mods = mod.SUPER_REV,  action = act.ActivatePaneDirection('Right') },
+	-- { key = 'p',     mods = mod.SUPER_REV,  action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }) },
 }
 
 return config
