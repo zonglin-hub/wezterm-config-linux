@@ -226,4 +226,5 @@ local _Config_ = require('config.init')
 return _Config_:init()
 	:append(require('config.fonts'))
 	:append(require('config.bindings'))
+	:append(require('config.general'))
 	:append(require('config.launch')).options
