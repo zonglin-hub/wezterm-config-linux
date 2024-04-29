@@ -219,6 +219,7 @@ config.mouse_bindings = {
 require('events.right-status').setup()
 require('events.tab-title').setup()
 require('events.new-tab-button').setup()
+require('utils.backdrops'):set_files():random()
 
 -- return config
 
