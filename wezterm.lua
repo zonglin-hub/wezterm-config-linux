@@ -225,6 +225,7 @@ require('events.tab-title').setup()
 local _Config_ = require('config.init')
 
 return _Config_:init()
+	:append(require('config.appearance'))
 	:append(require('config.fonts'))
 	:append(require('config.bindings'))
 	:append(require('config.general'))
