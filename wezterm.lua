@@ -218,6 +218,7 @@ config.mouse_bindings = {
 -- init  right-status.lua config
 require('events.right-status').setup()
 require('events.tab-title').setup()
+require('events.new-tab-button').setup()
 
 -- return config
 
